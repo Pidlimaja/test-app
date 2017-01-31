@@ -1,0 +1,6 @@
+<div class="polaroid" tabindex="1" (click)="onClick()" (keypress)="onClick()"> <!--[ngClass]=""? kvuli stylovani po kliknuti - stin-->
+  <img class="thumbnail" [src]="imgUrl" />
+  <p>{{imgDescript || imgUrl}}</p>
+</div>
+<app-modal [display]='display' [imgUrl]='imgUrl' (notify)='onNotify($event)'></app-modal> <!--tady nebo v app?-->
+

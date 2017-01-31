@@ -1,0 +1,39 @@
+/*vycentrování obrázku (stačí horizontální centrování + fixní vertikální odsazení)*/
+/*body margin - posune obrazky*/
+
+p{
+  font-family: 'Satisfy', cursive;
+  overflow: hidden;
+  /*white-space: nowrap;*/
+  text-overflow: ellipsis;
+  margin: 10px;
+}
+.thumbnail{
+  width:280px;
+  /*max-width?*/
+  margin: auto;
+  margin-top: 10px;
+}
+.polaroid {
+  display: inline-block;
+  max-width: 300px;
+  width: 300px;
+  margin: auto;
+  background-color: white;
+  box-shadow: 0px 0px 10px black;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+  transition-property: transform;
+  transition-duration: 0.2s;
+}
+.polaroid:hover {
+  transform: rotate(-7deg);
+  cursor: pointer;
+}
+/*active?*/
+.polaroid:focus{
+  box-shadow: 0px 0px 30px black;
+}
+

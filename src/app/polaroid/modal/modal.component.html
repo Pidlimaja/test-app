@@ -1,0 +1,4 @@
+<div #modal class="modal" *ngIf="display" [@fadeInOut] (click)="onModalClick($event)">
+  <a title="Close" class="close" (click)="onCrossClick($event)">&times;</a> <!--href="#close"-->
+  <img class="displayedImg" [src]="imgUrl"/>
+</div>
