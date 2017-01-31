@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['polaroid.component.scss']
 })
 export class PolaroidComponent implements OnInit {
- @Input() imgDescript: string; //string proto, aby se tam nemohlo ulozit neco jinyho
+  @Input() imgDescript: string; //string proto, aby se tam nemohlo ulozit neco jinyho
   @Input() imgUrl: string; //cesta? //pased to modal
   @Input() descriptPlacement: boolean;
   display: boolean = false;//pased to modal
@@ -22,7 +22,15 @@ export class PolaroidComponent implements OnInit {
    */
   onClick() {
     // obrazek zobrazi - musim dat vedet komponentne modal - jak?
+
     this.display = true;
+  }
+  onKeyClick(event)
+  {
+    if (event.key === "Enter")
+    {
+      this.display = true;
+    }
   }
   onNotify(displayed:boolean):void {
     this.display = displayed;

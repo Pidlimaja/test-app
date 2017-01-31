@@ -1,4 +1,4 @@
-<div class="polaroid" tabindex="1" (click)="onClick()" (keypress)="onClick()"> <!--[ngClass]=""? kvuli stylovani po kliknuti - stin-->
+<div class="polaroid" tabindex="1" (click)="onClick()" (keypress)="onKeyClick($event)"> <!--[ngClass]=""? kvuli stylovani po kliknuti - stin-->
   <img class="thumbnail" [src]="imgUrl" />
   <p>{{imgDescript || imgUrl}}</p>
 </div>
